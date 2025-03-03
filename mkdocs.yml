@@ -1,0 +1,54 @@
+site_name: graph-utils
+repo_url: https://github.com/commons-research/graph-utils
+site_url: https://commons-research.github.io/graph-utils
+site_description: TPython package to fetch and transform graph files.
+site_author: Pierre-Marie Allard
+edit_uri: edit/main/docs/
+repo_name: commons-research/graph-utils
+copyright: Maintained by <a href="https://commons-research.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/commons-research/graph-utils
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/graph-utils
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
